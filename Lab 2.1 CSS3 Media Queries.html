@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS3 Media Queries</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Kanit" rel="stylesheet">
+	<style>
+		.center{text-align: center;}
+		.lightPink{background-color: rgb(240, 128, 128);}
+		.lightBlue{background-color: rgb(122, 142, 255);}
+		.lightGreen{background-color: rgb(102, 255, 102);}
+		.darkGrey{background-color: #282828;}
+		.baloo{font-family: 'Baloo Bhaina', cursive; font-size: 3em;}
+		.kanit{font-family: 'Kanit', cursive; font-size: 1.5em;}
+		body{
+			background:url(road.jpg) center top fixed;
+			background-size: auto;
+		}
+		[class*="col-"] {
+		    padding: 5px;
+		    float: left;
+			font-family: 'Kanit', cursive; font-size: 1.5em;
+		}
+		.menu ul {
+		    list-style-type: none;
+		    margin: 2px;
+		    padding: 0;
+		}
+		.menu li {
+		    padding: 8px;
+		    margin-bottom: 7px;
+		    background-color: rgba(0, 0, 0, 0.5);
+		}
+		.menu a{
+			color: white;
+		}
+		.menu a:hover {
+			color: rgb(102, 255, 102);
+		}
+		.col-1{
+			float: none;
+			font-family: 'Baloo Bhaina', cursive; font-size: 3em;
+			text-align: center;
+			color: black;
+		}
+		.col-2{
+			float: left;
+			width: 20%;
+		}
+		.col-3{
+			width: 33%;
+			padding: 0em 1em 1em 1em;
+		}
+		.col-4{
+			text-align: center;
+			width: 47%;			
+		}
+		.col-4 > p{
+			text-align: left;
+		}
+		.col-4 > figure{
+			display: inline-block;
+		}
+		.col-5{
+			background: rgba(153, 255, 153, 0.5);
+			width: 100%;	
+		}
+		.col-6{
+			background: rgba(255, 153, 153, 0.5);
+			width: 100%;
+		}
+		.col-7{
+			background: rgba(122, 142, 255,0.5);
+			width: 100%;
+		}
+		.col-8 a{
+			color: white;
+			width: 100%;
+		}
+		@media screen and (max-width: 991px){
+			.menu{
+				width: 100%;
+			}
+			.col-3{
+				width: 100%;
+			}
+			.col-4{
+				width: 100%;
+			}
+			.col-8 a{
+			color: black;
+		}
+		}
+	</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<nav class="navbar navbar-default baloo" style="background-color: #CC3333; " >
+		<div class="container-fluid">
+  			<div class="navbar-header">
+      			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="https://pirun.ku.ac.th/~b5810404928/" style="color: #ffffff; font-size: 1em"><b>ChotikaLu</b></a>
+    		</div>
+
+    		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="font-size: 0.8em">
+			    <ul class="nav navbar-nav">
+			      	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"  style="color: #ffffff">Biography<span class="caret"></span></a>
+				        <ul class="dropdown-menu" style="font-size: 0.8em">
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/#general">• General</a></li>
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/#education">• Education</a></li>
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/#skill">• Programming Skill</a></li>
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/#interest">• Interest</a></li>
+				        </ul>
+				    </li>
+
+			      	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"  style="color: #ffffff">Summarize<span class="caret"></span></a>
+				        <ul class="dropdown-menu" style="font-size: 0.8em">
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/Builds&Displays a Web page of Browser.html">• Builds&Displays a Web page of Browser</a></li>
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/Render a Website of Browser.html">• Render a Website of Browser</a></li>
+				        </ul>
+				    </li>
+
+			      	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"  style="color: #ffffff">Lab<span class="caret"></span></a>
+				        <ul class="dropdown-menu" style="font-size: 0.8em">
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/Lab 2.1 CSS3 Media Queries.html">• Lab 2.1 CSS3 Media Queries</a></li>
+				        </ul>
+				    </li>
+			    </ul>
+		  </div>
+		</div>
+	</nav>
+		<!-- content -->
+	<div class="container">
+		<div class="row">
+			<div class = "col-1">
+          		CSS3 Media Queries
+            </div>
+        </div>
+
+        <div class="row">
+			<div class="col-2 menu">
+				<ul>
+					<li><a href="#what-is-it">คืออะไร?!</a></li>
+					<li><a href="#origin-and-principle">ที่มาและหลักการใช้งาน</a></li>
+					<li><a href="#how-to-use">วิธีใช้งาน</a></li>
+					<li><a href="#benefit">ประโยชน์</a></li>
+					<li><a href="#reference">เอกสารอ้างอิง</a></li>
+				</ul>
+			</div>
+
+
+			<div class="col-3" id="what-is-it">
+          		<h1>คืออะไร?!</h1>
+				&emsp;Media queries เป็นองค์ประกอบของการออกแบบที่มีการเปลี่ยนแปลงตามอุปกรณ์ที่ใช้ หรือขนาดมุมมองของเบราว์เซอร์ โดยใช้ได้กับหลาย media type เช่น print, screen, speech เป็นต้น แต่คำสั่งที่ใช้งานหลักๆ คือ print ใช้กำหนดรูปแบบตอนพิมพ์ กับ screen ใช้กำหนดรูปแบบการแสดงบนจอภาพ
+            </div>
+			<div class="col-4">
+				<br>
+				<figure>
+         			<img src="desktop.png" class="img-thumbnail" alt="Desktop">
+         			<figcaption style="">Desktop</figcaption>
+         		</figure>
+
+				<figure>
+         			<img src="tablet.png" class="img-thumbnail" alt="Tablet">
+         			<figcaption>Tablet</figcaption>
+         		</figure>
+				<figure>
+         			<img src="phone.png" class="img-thumbnail" alt="Phone">
+         			<figcaption>Phone</figcaption>
+         		</figure>
+            </div>
+        </div>
+        <div class="row" id="origin-and-principle">
+			<div class="col-5">
+          		<h1>ที่มา</h1>
+				&emsp;เกิดจากการที่ปัจจุบันมีอุปกรณ์มากมาย และมีคุณสมบัติที่แตกต่างกัน จึงต้องมีตัวช่วยในการแสดงผลข้อมูล เพื่อแสดงผลข้อมูลได้อย่างเหมาะสมสำหรับแต่ละอุปกรณ์ โดย CSS3 Media Queries จะใช้กับการออกแบบที่แตกต่างกันระหว่างหน้าจอแสดงผลขนาดเล็กและขนาดใหญ่
+				<h1>หลักการ</h1>
+				&emsp;CSS ที่ได้กำหนดไว้ จะทำงานก็ต่อเมื่อคุณสมบัติของอุปกรณ์ตรงกับเงื่อนไขของ Media Queries
+            </div>
+        </div>
+        <div class="row">
+			<div class="col-6" id="how-to-use">
+          		<h1>วิธีใช้</h1>
+
+				<ol>
+				รูปแบบการเขียน<br>					
+				&emsp;@media (_conditions_) { ... }
+					<li>
+						ขึ้นต้นด้วย @media ตามด้วยชื่ออุปกรณ์<br>
+						&emsp;@media print { ... }<br>
+						&emsp;&emsp;- คำสั่งนี้จะทำงานเมื่อเป็นการพิมพ์<br>
+						และเราสามารถกำหนดได้หลายอุปกรณ์ ดังนี้<br>
+						&emsp;@media screen, print { ... }<br>
+						&emsp;&emsp;- คำสั่งนี้จะทำงานเมื่อเป็นหน้าจอเบราวเซอร์ หรือ การพิมพ์<br>
+					</li><br>
+					<li>
+						การกำหนดเงื่อนไข Expression เพิ่มเติม<br>
+						&emsp;@media media-types and media-feature { ... }<br>
+						Media Features ที่ใช้บ่อย<br>
+						&emsp;width : ความกว้างของviewport<br>
+						&emsp;height : ความสูงของviewport<br>
+						&emsp;device-width : ความกว้างของส่วนแสดงผลของอุปกรณ์<br>
+						&emsp;device-height : ความสูงของส่วนแสดงผลของอุปกรณ์<br>
+						&emsp;orientation : แนวการแสดงผลของอุปกรณ์ โดยมี portrait เป็นแนวตั้ง, landscape เป็นแนวนอน<br>
+					</li>
+				</ol>
+				<h1>ตัวอย่าง</h1>
+					&emsp;สามารถเพิ่ม prefix “min-” เพื่อแสดงเงื่อนไขขั้นต่ำและ “max-” เพื่อแสดงเงื่อนไขสูงสุดได้<br>
+					&emsp;&emsp;@media (max-width: 700px) { ... }<br>
+					&emsp;&emsp;&emsp;- คำสั่งนี้จะทำงานเมื่อความกว้างของ viewport มีค่าเท่ากับ หรือน้อยกว่า 700px<br><br>
+					&emsp;&emsp;@media (min-width: 600px) { ... }<br>
+					&emsp;&emsp;&emsp;- คำสั่งนี้จะทำงานเมื่อความกว้างของ viewport มีค่าเท่ากับ หรือมากกว่า 600px<br><br>
+					&emsp;&emsp;@media screen and (min-width: 320px) { ... }<br>
+					&emsp;&emsp;&emsp;- คำสั่งนี้จะทำงานเมื่อหน้าจอของเบราว์เซอร์มีความกว้างของ viewport เท่ากับ หรือมากกว่า 320px<br><br>
+					&emsp;&emsp;@media screen and (max-width: 500px) {<br>
+					&emsp;&emsp;&emsp;body {<br>
+					&emsp;&emsp;&emsp;&emsp;background-color: blue;<br>
+					&emsp;&emsp;&emsp;}<br>
+					&emsp;&emsp;}<br>
+					&emsp;&emsp;&emsp;- คำสั่งนี้จะทำให้พื้นหลังของ body เป็นสีน้ำเงิน เมื่อหน้าจอของเบราว์เซอร์มีความกว้างของ viewport เท่ากับ หรือน้อยกว่า 500px
+            </div>
+        </div>
+        <div class="row">
+        	<div class="col-7" id="benefit">
+        		<h1>ประโยชน์</h1>
+        		<ul>
+        			<li>ใช้ในการทำ Responsive Web Design</li>
+        			<li>ลดการใช้ JavaScript ในการ load หน้า</li>
+        			<li>เหมาะกับงานที่มีการแสดงผลที่แตกต่างกันโดยขึ้นอยู่กับอุปกรณ์หรือขนาดจอแสดงผล</li>
+        		</ul>
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-8" id="reference">
+        		<h1>เอกสารอ้างอิง</h1>
+        		<ul>
+        			<li><a href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp" target="_blank">https://www.w3schools.com/css/css_rwd_mediaqueries.asp</a></li>
+        			<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+</a></li>
+        			<li><a href="https://www.codebee.co.th/labs/css3-media-query-คืออะไร" target="_blank">https://www.codebee.co.th/labs/css3-media-query-คืออะไร</a></li>
+        			<li><a href="http://cssmediaqueries.com/what-are-css-media-queries.html" target="_blank">http://cssmediaqueries.com/what-are-css-media-queries.html</a></li>
+        		</ul>
+        	</div>
+        </div>
+	</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

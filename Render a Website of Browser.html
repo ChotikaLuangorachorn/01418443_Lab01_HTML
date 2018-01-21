@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>การแสดงหน้าเว็บของเบราว์เซอร์</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Baloo+Bhaina|Kanit" rel="stylesheet">
+	<style>
+		.center{text-align: center;}
+		.darkGrey{background-color: #282828;}
+		.baloo{font-family: 'Baloo Bhaina', cursive; font-size: 3em;}
+		.kanit{font-family: 'Kanit', cursive; font-size: 1.5em;}
+		body{
+			background:url(colorBG.jpg) fixed;
+		}	
+	</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<nav class="navbar navbar-default baloo" style="background-color: #CC3333; " >
+  		<div class="container-fluid">
+  			<div class="navbar-header">
+      			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="https://pirun.ku.ac.th/~b5810404928/" style="color: #ffffff; font-size: 1em"><b>ChotikaLu</b></a>
+    		</div>
+
+    		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="font-size: 0.8em">
+			    <ul class="nav navbar-nav">
+			      	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"  style="color: #ffffff">Biography<span class="caret"></span></a>
+				        <ul class="dropdown-menu" style="font-size: 0.8em">
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/#general">• General</a></li>
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/#education">• Education</a></li>
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/#skill">• Programming Skill</a></li>
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/#interest">• Interest</a></li>
+				        </ul>
+				    </li>
+
+			      	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"  style="color: #ffffff">Summarize<span class="caret"></span></a>
+				        <ul class="dropdown-menu" style="font-size: 0.8em">
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/Builds&Displays a Web page of Browser.html">• Builds&Displays a Web page of Browser</a></li>
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/Render a Website of Browser.html">• Render a Website of Browser</a></li>
+				        </ul>
+				    </li>
+
+			      	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"  style="color: #ffffff">Lab<span class="caret"></span></a>
+				        <ul class="dropdown-menu" style="font-size: 0.8em">
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/Lab 2.1 CSS3 Media Queries.html">• Lab 2.1 CSS3 Media Queries</a></li>
+				        </ul>
+				    </li>				    
+			    </ul>
+		  </div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row darkGrey">
+			<div class = "col-sm-12" style="color: #ffffff">
+          		<h1 class="baloo">
+            		<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+            		Summarize</h1>
+            </div>
+        </div>
+
+        <div class="row darkGrey">
+        	<center class="kanit" style="color: #ffffff;font-size: 2em">การแสดงผลเว็บไซต์ของเบราว์เซอร์<br></center>
+	        <br>
+        	<div class="col-sm-12 kanit" style="color: #ffffff">
+	        		<ol>
+	        			<li>Parsing
+	        			การสร้าง object จาก code ที่ได้รับจาก server ประกอบด้วย 2 ขั้นตอนย่อยคือ
+	        			<ul>
+	        				<li><u>Tokenization</u> แยก code ออกเป็นส่วนๆตามประเภท<br>
+	        				Start tag: tag open, tag name, tag close<br>
+	        				End tag: close tag open, tage name, tag close</li>
+	        				<li><u>Parsing</u> นำ token แต่ละส่วนนำมาตรวจสอบกับ HTML syntax<br>
+	        				Reentrant คือ parsing process ที่สามารถเกิด interrupted ได้</li>
+	        			</ul>
+	        		</li>
+	        			<li>Render tree<br>
+	        			ถูกสร้างขึ้นมาจาก DOM และ CSSOM โดยรวม DOM เข้ากับ CSSOM</li>
+	        			<center><img src="renderTree.png" alt="Render Tree" width="800" height="450"></center>
+	        			<li>Layout<br>
+	        			อาจเรียกว่า Reflow คือการหาตำแหน่ง ขนาดของnode(หรือ element) ใน render tree ขนาดของ node ประกอบด้วย width กับ height</li>
+	        			<li>Paint<br>
+	        			เป็นขั้นตอนที่ต้องใช้ข้อมูลทั้งหมดที่ได้จากการrender tree จะรวม render tree เป็น layers มีการสร้าง bitmap จากแต่ละlayer และแสดงผลบนหน้าจอ<br>
+	        			bitmap คือ การอัพโหลดไปยัง GPU เพื่อสร้าง texture
+	        			</li>
+	        		</ol>
+	        		<br>
+	        		DOM (Document Object Model) ตัวแสดงคุณสมบัติและความสัมพันธ์ระหว่างแต่ละ object ในหน้าเว็บ(document) ซึ่งก็จะประกอบไปด้วย properties กับ methods ของแต่ละ object พร้อมกับความสัมพันธ์กับ object อื่นๆ
+	        		<br><br>
+	        		CSSOM (CSS Object Model) คล้าย DOM แต่เป็นการสร้าง object model จาก CSS ของเว็บ ที่มีทั้ง properties และความสัมพันธ์กับ object อื่นๆ (Cascading ของ CSS)
+        	</div>
+        	<center>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/SmE4OwHztCc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        	</center>
+        	<div class="col-sm-12 kanit" style="color: #ffffff">
+        		Reference: <a href="https://youtu.be/SmE4OwHztCc">https://youtu.be/SmE4OwHztCc</a>
+        		
+        	</div>
+        </div>
+        <div class="row"><p></p></div>
+	</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

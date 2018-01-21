@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>การสร้างและแสดงหน้าเว็บของเบราว์เซอร์</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Baloo+Bhaina|Kanit" rel="stylesheet">
+	<style>
+		.center{text-align: center;}
+		.darkGrey{background-color: #282828;}
+		.baloo{font-family: 'Baloo Bhaina', cursive; font-size: 3em;}
+		.kanit{font-family: 'Kanit', cursive; font-size: 1.5em;}
+		body{
+			background:url(colorBG.jpg) fixed;
+		}		
+	</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<nav class="navbar navbar-default baloo" style="background-color: #CC3333; " >
+  		<div class="container-fluid">
+  			<div class="navbar-header">
+      			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="https://pirun.ku.ac.th/~b5810404928/" style="color: #ffffff; font-size: 1em"><b>ChotikaLu</b></a>
+    		</div>
+
+    		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="font-size: 0.8em">
+			    <ul class="nav navbar-nav">
+			      	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"  style="color: #ffffff">Biography<span class="caret"></span></a>
+				        <ul class="dropdown-menu" style="font-size: 0.8em">
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/#general">• General</a></li>
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/#education">• Education</a></li>
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/#skill">• Programming Skill</a></li>
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/#interest">• Interest</a></li>
+				        </ul>
+				    </li>
+
+			      	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"  style="color: #ffffff">Summarize<span class="caret"></span></a>
+				        <ul class="dropdown-menu" style="font-size: 0.8em">
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/Builds&Displays a Web page of Browser.html">• Builds&Displays a Web page of Browser</a></li>
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/Render a Website of Browser.html">• Render a Website of Browser</a></li>
+				        </ul>
+				    </li>
+
+			      	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"  style="color: #ffffff">Lab<span class="caret"></span></a>
+				        <ul class="dropdown-menu" style="font-size: 0.8em">
+				          <li><a href="https://pirun.ku.ac.th/~b5810404928/Lab 2.1 CSS3 Media Queries.html">• Lab 2.1 CSS3 Media Queries</a></li>
+				        </ul>
+				    </li>
+			    </ul>
+		  </div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row darkGrey">
+			<div class = "col-sm-12" style="color: #ffffff">
+          		<h1 class="baloo">
+            		<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+            		Summarize</h1>
+            </div>
+        </div>
+
+        <div class="row darkGrey">
+	        <center class="kanit" style="color: #ffffff;font-size: 2em">การสร้างและแสดงหน้าเว็บของเบราว์เซอร์<br></center>
+	        <br>
+        	<div class="col-sm-12 kanit" style="color: #ffffff">
+	        	web browser ที่เป็น client web browser อาจเป็น
+	        		<ul>
+	        			<li>Desktop web browser</li>
+	        			<li>Mobile web browser</li>
+	        			<li>Application ที่สามารถแสดงหน้าเว็บได้</li>
+	        			<li>Appliance (watch, fridge, car, etc.) อุปกรณ์ที่ไปดึงทรัพยากรบนเว็บมาแสดงผลได้</li>
+	        		</ul><br>
+	        	URL  (Uniform Resource Locator) คือ ที่อยู่ของเว็บไซต์หรือสิ่งที่ต้องการหา<br>
+	        	รูปแบบของ URL
+	        		<ul>
+	        			<li>Scheme หรือ Protocol คล้ายกับ HTTP / HTTPS / FTP<br>
+	        			ตามด้วย colon (:) และ double slash (//) ที่แยกscheme ออกจากส่วนอี่เหลือของURL</li>
+	        			<li>Server domain name เป็นชื่อของ Server</li>
+	        			<li>Port (default:80)<br>
+	        			URL ที่ไม่มีเลขportปรากฏ เพราะเป็นport 80</li>
+	        			<li>Path to resource</li>
+	        			<li>Query string (optional)</li>
+	        			<li>Fragment ID (optional)</li>
+	        		</ul>
+				<center><img src="url.png" alt="URL format" width="500" height="300"></center>
+	        	<br>
+	        	URL ในหน้าปัจจุบัน จะแสดงอยู่ด้านบนของ browser และ URL ยังปรากฏในHTML tagที่อยู่ในresourceที่ใช้ในหน้านั้น(จะถูกเรียนโดยอัตโนมัติ) และยังมีhyperlink(ที่ถูกเรียกเมื่อคลิกที่link)<br><br>
+	        	Resource อื่นๆ เช่น รูปภาพ, JavaScript, CSS (Cascading style sheets) โดยtagจะมีattribute เพื่อใส่ URL ที่ต้องการไปหา หรือดึงมาแสดงผล เช่น anchor tag จะมี hypertext reference ที่สามารถระบุURL เพื่อไปยังหน้าถัดไปที่userต้องการเรียกใช้โดยการคลิกที่link<br><br>
+	        	การทำงานเมื่อเรียกPageด้วยURL
+	        		<ol>
+	        			<li>พิมพ์ URL ที่ location bar ด้านบนของ browser และกดค้นหา</li>
+	        			<li>browser จะใช้คำสั่ง GET เพื่อนำURLไปที่domain nameที่เป็น server และเครื่องจะรับ request และนำPATHไปหาตำแหน่งที่อยู่ในฐานข้อมูล หรือ ในแฟ้มของระบบ</li>
+	        			<li>หาที่อยู่ของresourceที่web browser ต้องการ เมื่อเจอจะคืนค่าไปที่browser</li>
+	        			<li>browser จะรับ file และเริ่มประมวลผล</li>
+	        		</ol>
+        	</div>
+
+        	<center>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/DuSURHrZG6I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        	</center>
+        	<div class="col-sm-12 kanit" style="color: #ffffff">
+        		Reference: <a href="https://youtu.be/DuSURHrZG6I">https://youtu.be/DuSURHrZG6I</a>	
+        	</div>
+        </div>
+        <div class="row"><p></p></div>
+
+	</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
